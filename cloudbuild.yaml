@@ -3,6 +3,6 @@ steps:
     entrypoint: bash
     args:
       - '-c'
-      - 'pip install -r requirements.txt && pytest --tb=short'
+      - 'pip install pytest -r requirements.txt && python -m pytest --tb=short'
 options:
   logging: CLOUD_LOGGING_ONLY
