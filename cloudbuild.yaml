@@ -1,9 +1,8 @@
 steps:
   - name: 'python:3.9'
-    entrypoint: pip
-    args: ['install', '-r', 'requirements.txt']
-  - name: 'python:3.9'
-    entrypoint: pytest
-    args: ['--tb=short']
+    entrypoint: bash
+    args:
+      - '-c'
+      - 'pip install -r requirements.txt && pytest --tb=short'
 options:
   logging: CLOUD_LOGGING_ONLY
