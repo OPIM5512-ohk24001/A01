@@ -6,3 +6,4 @@ steps:
       - 'pip install pytest -r requirements.txt && python -m pytest --tb=short'
 options:
   logging: CLOUD_LOGGING_ONLY
+# build config
